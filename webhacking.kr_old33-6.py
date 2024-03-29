@@ -4,7 +4,7 @@ import hashlib
 url = "https://webhacking.kr/challenge/bonus-6/gpcc.php"
 address = '자신의 ip'
 user_agent = 'python-requests/2.31.0' #자신의 버전이 다를수있습니다.
-md5_ip_addr = hashlib.md5(address.encode()).hexdigest()
+md5_ip_addr = hashlib.md5(address.encode()).hexdigest() #ip 를 md5 로 인코딩
 md5_agent_addr = hashlib.md5(user_agent.encode()).hexdigest()
 
 cookie = { 'test' : md5_ip_addr }
